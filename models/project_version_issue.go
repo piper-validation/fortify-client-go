@@ -61,7 +61,7 @@ type ProjectVersionIssue struct {
 	// Date when issue found
 	// Required: true
 	// Format: date-time
-	FoundDate *strfmt.DateTime `json:"foundDate"`
+	FoundDate *Iso8601MilliDateTime `json:"foundDate"`
 
 	// Friority
 	// Required: true
@@ -151,7 +151,7 @@ type ProjectVersionIssue struct {
 	// Date when issue removed
 	// Required: true
 	// Format: date-time
-	RemovedDate *strfmt.DateTime `json:"removedDate"`
+	RemovedDate *Iso8601MilliDateTime `json:"removedDate"`
 
 	// Issue reviewer
 	// Required: true

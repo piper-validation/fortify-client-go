@@ -8,4 +8,5 @@ require (
 	github.com/go-openapi/strfmt v0.19.4
 	github.com/go-openapi/swag v0.19.7
 	github.com/go-openapi/validate v0.19.6
+	go.mongodb.org/mongo-driver v1.1.2
 )

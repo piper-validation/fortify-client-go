@@ -67,12 +67,12 @@ type ProjectVersionState struct {
 	// last fpr upload date
 	// Required: true
 	// Format: date-time
-	LastFprUploadDate *strfmt.DateTime `json:"lastFprUploadDate"`
+	LastFprUploadDate *Iso8601MilliDateTime `json:"lastFprUploadDate"`
 
 	// metric evaluation date
 	// Required: true
 	// Format: date-time
-	MetricEvaluationDate *strfmt.DateTime `json:"metricEvaluationDate"`
+	MetricEvaluationDate *Iso8601MilliDateTime `json:"metricEvaluationDate"`
 
 	// percent audited delta
 	// Required: true

@@ -99,7 +99,7 @@ type Scan struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	UploadDate strfmt.DateTime `json:"uploadDate"`
+	UploadDate Iso8601MilliDateTime `json:"uploadDate"`
 }
 
 // Validate validates this scan
@@ -313,7 +313,7 @@ func (m *Scan) validateType(formats strfmt.Registry) error {
 
 func (m *Scan) validateUploadDate(formats strfmt.Registry) error {
 
-	if err := validate.Required("uploadDate", "body", strfmt.DateTime(m.UploadDate)); err != nil {
+	if err := validate.Required("uploadDate", "body", Iso8601MilliDateTime(m.UploadDate)); err != nil {
 		return err
 	}
 

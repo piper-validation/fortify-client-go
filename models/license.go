@@ -25,7 +25,7 @@ type License struct {
 	// Date when license was created
 	// Read Only: true
 	// Format: date-time
-	CreationDate strfmt.DateTime `json:"creationDate,omitempty"`
+	CreationDate Iso8601MilliDateTime `json:"creationDate,omitempty"`
 
 	// License description
 	// Read Only: true
@@ -34,7 +34,7 @@ type License struct {
 	// Date when license is going to be expired
 	// Read Only: true
 	// Format: date-time
-	ExpirationDate strfmt.DateTime `json:"expirationDate,omitempty"`
+	ExpirationDate Iso8601MilliDateTime `json:"expirationDate,omitempty"`
 
 	// Name of the license owner
 	// Read Only: true

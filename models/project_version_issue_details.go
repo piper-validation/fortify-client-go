@@ -104,7 +104,7 @@ type ProjectVersionIssueDetails struct {
 	// Issue found date
 	// Required: true
 	// Format: date-time
-	FoundDate *strfmt.DateTime `json:"foundDate"`
+	FoundDate *Iso8601MilliDateTime `json:"foundDate"`
 
 	// Fortify priority order (Friority)
 	// Required: true
@@ -211,7 +211,7 @@ type ProjectVersionIssueDetails struct {
 	// Issue removed date
 	// Required: true
 	// Format: date-time
-	RemovedDate *strfmt.DateTime `json:"removedDate"`
+	RemovedDate *Iso8601MilliDateTime `json:"removedDate"`
 
 	// Request body
 	// Required: true

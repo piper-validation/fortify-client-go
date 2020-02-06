@@ -45,7 +45,7 @@ type CloudWorker struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	LastSeen strfmt.DateTime `json:"lastSeen"`
+	LastSeen Iso8601MilliDateTime `json:"lastSeen"`
 
 	// os architecture
 	// Required: true
@@ -96,13 +96,13 @@ type CloudWorker struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	WorkerExpiryTime strfmt.DateTime `json:"workerExpiryTime"`
+	WorkerExpiryTime Iso8601MilliDateTime `json:"workerExpiryTime"`
 
 	// worker start time
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	WorkerStartTime strfmt.DateTime `json:"workerStartTime"`
+	WorkerStartTime Iso8601MilliDateTime `json:"workerStartTime"`
 }
 
 // Validate validates this cloud worker
@@ -239,7 +239,7 @@ func (m *CloudWorker) validateLastActivity(formats strfmt.Registry) error {
 
 func (m *CloudWorker) validateLastSeen(formats strfmt.Registry) error {
 
-	if err := validate.Required("lastSeen", "body", strfmt.DateTime(m.LastSeen)); err != nil {
+	if err := validate.Required("lastSeen", "body", Iso8601MilliDateTime(m.LastSeen)); err != nil {
 		return err
 	}
 
@@ -333,7 +333,7 @@ func (m *CloudWorker) validateVMName(formats strfmt.Registry) error {
 
 func (m *CloudWorker) validateWorkerExpiryTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("workerExpiryTime", "body", strfmt.DateTime(m.WorkerExpiryTime)); err != nil {
+	if err := validate.Required("workerExpiryTime", "body", Iso8601MilliDateTime(m.WorkerExpiryTime)); err != nil {
 		return err
 	}
 
@@ -346,7 +346,7 @@ func (m *CloudWorker) validateWorkerExpiryTime(formats strfmt.Registry) error {
 
 func (m *CloudWorker) validateWorkerStartTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("workerStartTime", "body", strfmt.DateTime(m.WorkerStartTime)); err != nil {
+	if err := validate.Required("workerStartTime", "body", Iso8601MilliDateTime(m.WorkerStartTime)); err != nil {
 		return err
 	}
 

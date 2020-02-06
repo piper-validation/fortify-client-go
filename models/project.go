@@ -24,7 +24,7 @@ type Project struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	CreationDate strfmt.DateTime `json:"creationDate"`
+	CreationDate Iso8601MilliDateTime `json:"creationDate"`
 
 	// Description
 	Description string `json:"description,omitempty"`
@@ -79,7 +79,7 @@ func (m *Project) validateCreatedBy(formats strfmt.Registry) error {
 
 func (m *Project) validateCreationDate(formats strfmt.Registry) error {
 
-	if err := validate.Required("creationDate", "body", strfmt.DateTime(m.CreationDate)); err != nil {
+	if err := validate.Required("creationDate", "body", Iso8601MilliDateTime(m.CreationDate)); err != nil {
 		return err
 	}
 

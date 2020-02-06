@@ -50,7 +50,7 @@ type ProjectVersion struct {
 	// Date this version was created
 	// Required: true
 	// Format: date-time
-	CreationDate *strfmt.DateTime `json:"creationDate"`
+	CreationDate *Iso8601MilliDateTime `json:"creationDate"`
 
 	// current state
 	CurrentState *ProjectVersionState `json:"currentState,omitempty"`

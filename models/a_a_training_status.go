@@ -20,7 +20,7 @@ type AATrainingStatus struct {
 
 	// last training time
 	// Format: date-time
-	LastTrainingTime strfmt.DateTime `json:"lastTrainingTime,omitempty"`
+	LastTrainingTime Iso8601MilliDateTime `json:"lastTrainingTime,omitempty"`
 
 	// message
 	Message string `json:"message,omitempty"`

@@ -27,7 +27,7 @@ type VariableHistory struct {
 	// The Date the variable value was taken
 	// Required: true
 	// Format: date-time
-	Timestamp *strfmt.DateTime `json:"timestamp"`
+	Timestamp *Iso8601MilliDateTime `json:"timestamp"`
 
 	// Variable value
 	// Required: true

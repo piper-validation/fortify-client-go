@@ -36,7 +36,7 @@ type DataExport struct {
 
 	// Export date
 	// Format: date-time
-	ExportDate strfmt.DateTime `json:"exportDate,omitempty"`
+	ExportDate Iso8601MilliDateTime `json:"exportDate,omitempty"`
 
 	// Name of data export file
 	// Required: true

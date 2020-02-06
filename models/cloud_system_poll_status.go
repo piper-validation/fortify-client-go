@@ -25,13 +25,13 @@ type CloudSystemPollStatus struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	LastPollTime strfmt.DateTime `json:"lastPollTime"`
+	LastPollTime Iso8601MilliDateTime `json:"lastPollTime"`
 
 	// last successful poll time
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	LastSuccessfulPollTime strfmt.DateTime `json:"lastSuccessfulPollTime"`
+	LastSuccessfulPollTime Iso8601MilliDateTime `json:"lastSuccessfulPollTime"`
 }
 
 // Validate validates this cloud system poll status
@@ -67,7 +67,7 @@ func (m *CloudSystemPollStatus) validateLastPollSuccessful(formats strfmt.Regist
 
 func (m *CloudSystemPollStatus) validateLastPollTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("lastPollTime", "body", strfmt.DateTime(m.LastPollTime)); err != nil {
+	if err := validate.Required("lastPollTime", "body", Iso8601MilliDateTime(m.LastPollTime)); err != nil {
 		return err
 	}
 
@@ -80,7 +80,7 @@ func (m *CloudSystemPollStatus) validateLastPollTime(formats strfmt.Registry) er
 
 func (m *CloudSystemPollStatus) validateLastSuccessfulPollTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("lastSuccessfulPollTime", "body", strfmt.DateTime(m.LastSuccessfulPollTime)); err != nil {
+	if err := validate.Required("lastSuccessfulPollTime", "body", Iso8601MilliDateTime(m.LastSuccessfulPollTime)); err != nil {
 		return err
 	}
 

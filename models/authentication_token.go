@@ -19,7 +19,7 @@ type AuthenticationToken struct {
 	// Date and time the token was created (in ISO 8601 format)
 	// Read Only: true
 	// Format: date-time
-	CreationDate strfmt.DateTime `json:"creationDate,omitempty"`
+	CreationDate Iso8601MilliDateTime `json:"creationDate,omitempty"`
 
 	// Purpose for which the token was requested.
 	Description string `json:"description,omitempty"`
@@ -34,7 +34,7 @@ type AuthenticationToken struct {
 
 	// Date and time the token expires (in ISO 8601 format). If not specified, it will default to the maximum lifetime for this token type.
 	// Format: date-time
-	TerminalDate strfmt.DateTime `json:"terminalDate,omitempty"`
+	TerminalDate Iso8601MilliDateTime `json:"terminalDate,omitempty"`
 
 	// String that represents the authentication token. (For security reasons, this value is null except for a successful token creation response.)
 	// Read Only: true

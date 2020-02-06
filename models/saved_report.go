@@ -35,7 +35,7 @@ type SavedReport struct {
 
 	// Generation date
 	// Format: date-time
-	GenerationDate strfmt.DateTime `json:"generationDate,omitempty"`
+	GenerationDate Iso8601MilliDateTime `json:"generationDate,omitempty"`
 
 	// id
 	// Read Only: true

@@ -43,7 +43,7 @@ type AlertHistoryEntry struct {
 
 	// triggered date
 	// Format: date-time
-	TriggeredDate strfmt.DateTime `json:"triggeredDate,omitempty"`
+	TriggeredDate Iso8601MilliDateTime `json:"triggeredDate,omitempty"`
 
 	// user name
 	UserName string `json:"userName,omitempty"`

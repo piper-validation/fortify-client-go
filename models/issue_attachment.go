@@ -40,7 +40,7 @@ type IssueAttachment struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	UpdateTime strfmt.DateTime `json:"updateTime"`
+	UpdateTime Iso8601MilliDateTime `json:"updateTime"`
 }
 
 // Validate validates this issue attachment
@@ -85,7 +85,7 @@ func (m *IssueAttachment) validateID(formats strfmt.Registry) error {
 
 func (m *IssueAttachment) validateUpdateTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("updateTime", "body", strfmt.DateTime(m.UpdateTime)); err != nil {
+	if err := validate.Required("updateTime", "body", Iso8601MilliDateTime(m.UpdateTime)); err != nil {
 		return err
 	}
 

@@ -33,7 +33,7 @@ type ActivityFeed struct {
 	// event date
 	// Read Only: true
 	// Format: date-time
-	EventDate strfmt.DateTime `json:"eventDate,omitempty"`
+	EventDate Iso8601MilliDateTime `json:"eventDate,omitempty"`
 
 	// event type
 	// Read Only: true

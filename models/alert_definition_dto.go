@@ -35,7 +35,7 @@ type AlertDefinitionDto struct {
 
 	// creation date
 	// Format: date-time
-	CreationDate strfmt.DateTime `json:"creationDate,omitempty"`
+	CreationDate Iso8601MilliDateTime `json:"creationDate,omitempty"`
 
 	// Required field for Scheduled alerts, Optional for other types
 	// Required: true
@@ -49,7 +49,7 @@ type AlertDefinitionDto struct {
 
 	// end date
 	// Format: date-time
-	EndDate strfmt.DateTime `json:"endDate,omitempty"`
+	EndDate Iso8601MilliDateTime `json:"endDate,omitempty"`
 
 	// id
 	// Read Only: true
@@ -98,7 +98,7 @@ type AlertDefinitionDto struct {
 
 	// start date
 	// Format: date-time
-	StartDate strfmt.DateTime `json:"startDate,omitempty"`
+	StartDate Iso8601MilliDateTime `json:"startDate,omitempty"`
 
 	// trigger description
 	TriggerDescription string `json:"triggerDescription,omitempty"`

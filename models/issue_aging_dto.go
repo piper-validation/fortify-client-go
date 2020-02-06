@@ -55,7 +55,7 @@ type IssueAgingDto struct {
 	// Issue audites that have been done after this date have been taken into account for average days to review calculation.
 	// Read Only: true
 	// Format: date-time
-	OldestScanDate strfmt.DateTime `json:"oldestScanDate,omitempty"`
+	OldestScanDate Iso8601MilliDateTime `json:"oldestScanDate,omitempty"`
 
 	// Number of not remediated issues in all application versions.
 	// Read Only: true

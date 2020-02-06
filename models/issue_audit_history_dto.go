@@ -27,7 +27,7 @@ type IssueAuditHistoryDto struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	AuditDateTime strfmt.DateTime `json:"auditDateTime"`
+	AuditDateTime Iso8601MilliDateTime `json:"auditDateTime"`
 
 	// Flag that indicates if there were any conflicts when audit information was merged.
 	// Required: true
@@ -123,7 +123,7 @@ func (m *IssueAuditHistoryDto) validateAttributeName(formats strfmt.Registry) er
 
 func (m *IssueAuditHistoryDto) validateAuditDateTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("auditDateTime", "body", strfmt.DateTime(m.AuditDateTime)); err != nil {
+	if err := validate.Required("auditDateTime", "body", Iso8601MilliDateTime(m.AuditDateTime)); err != nil {
 		return err
 	}
 

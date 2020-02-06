@@ -27,7 +27,7 @@ type LocalUser struct {
 	// Date user's account was frozen
 	// Required: true
 	// Format: date-time
-	DateFrozen *strfmt.DateTime `json:"dateFrozen"`
+	DateFrozen *Iso8601MilliDateTime `json:"dateFrozen"`
 
 	// email
 	// Required: true

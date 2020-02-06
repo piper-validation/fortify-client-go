@@ -31,7 +31,7 @@ type IIDMigration struct {
 
 	// processing date
 	// Format: date-time
-	ProcessingDate strfmt.DateTime `json:"processingDate,omitempty"`
+	ProcessingDate Iso8601MilliDateTime `json:"processingDate,omitempty"`
 
 	// project version Id
 	ProjectVersionID int64 `json:"projectVersionId,omitempty"`

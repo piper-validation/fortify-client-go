@@ -31,7 +31,7 @@ type PerformanceIndicatorHistory struct {
 
 	// timestamp
 	// Format: date-time
-	Timestamp strfmt.DateTime `json:"timestamp,omitempty"`
+	Timestamp Iso8601MilliDateTime `json:"timestamp,omitempty"`
 
 	// Required if referencing an existing Performance Indicator History  object
 	// Required: true

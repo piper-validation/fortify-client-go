@@ -30,7 +30,7 @@ type CloudSystemMetrics struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	ControllerStartTime strfmt.DateTime `json:"controllerStartTime"`
+	ControllerStartTime Iso8601MilliDateTime `json:"controllerStartTime"`
 }
 
 // Validate validates this cloud system metrics
@@ -75,7 +75,7 @@ func (m *CloudSystemMetrics) validateControllerDiskUsed(formats strfmt.Registry)
 
 func (m *CloudSystemMetrics) validateControllerStartTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("controllerStartTime", "body", strfmt.DateTime(m.ControllerStartTime)); err != nil {
+	if err := validate.Required("controllerStartTime", "body", Iso8601MilliDateTime(m.ControllerStartTime)); err != nil {
 		return err
 	}
 

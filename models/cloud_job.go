@@ -30,11 +30,11 @@ type CloudJob struct {
 
 	// job expiry time
 	// Format: date-time
-	JobExpiryTime strfmt.DateTime `json:"jobExpiryTime,omitempty"`
+	JobExpiryTime Iso8601MilliDateTime `json:"jobExpiryTime,omitempty"`
 
 	// job finished time
 	// Format: date-time
-	JobFinishedTime strfmt.DateTime `json:"jobFinishedTime,omitempty"`
+	JobFinishedTime Iso8601MilliDateTime `json:"jobFinishedTime,omitempty"`
 
 	// job has fpr
 	JobHasFpr bool `json:"jobHasFpr,omitempty"`
@@ -44,11 +44,11 @@ type CloudJob struct {
 
 	// job queued time
 	// Format: date-time
-	JobQueuedTime strfmt.DateTime `json:"jobQueuedTime,omitempty"`
+	JobQueuedTime Iso8601MilliDateTime `json:"jobQueuedTime,omitempty"`
 
 	// job started time
 	// Format: date-time
-	JobStartedTime strfmt.DateTime `json:"jobStartedTime,omitempty"`
+	JobStartedTime Iso8601MilliDateTime `json:"jobStartedTime,omitempty"`
 
 	// job state
 	JobState string `json:"jobState,omitempty"`

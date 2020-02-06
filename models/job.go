@@ -33,7 +33,7 @@ type Job struct {
 	// End time of job
 	// Required: true
 	// Format: date-time
-	FinishTime *strfmt.DateTime `json:"finishTime"`
+	FinishTime *Iso8601MilliDateTime `json:"finishTime"`
 
 	// Job class
 	// Required: true
@@ -70,7 +70,7 @@ type Job struct {
 	// Start time of job
 	// Required: true
 	// Format: date-time
-	StartTime *strfmt.DateTime `json:"startTime"`
+	StartTime *Iso8601MilliDateTime `json:"startTime"`
 
 	// Job State
 	// Required: true

@@ -19,7 +19,7 @@ type LicenseCapability struct {
 	// License capability expiration date
 	// Required: true
 	// Format: date-time
-	ExpirationDate *strfmt.DateTime `json:"expirationDate"`
+	ExpirationDate *Iso8601MilliDateTime `json:"expirationDate"`
 
 	// License capability identifier
 	// Required: true

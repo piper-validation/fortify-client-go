@@ -25,7 +25,7 @@ type DynamicScanRequest struct {
 
 	// The date that the dynamic scan request was updated
 	// Format: date-time
-	LastUpdateDate strfmt.DateTime `json:"lastUpdateDate,omitempty"`
+	LastUpdateDate Iso8601MilliDateTime `json:"lastUpdateDate,omitempty"`
 
 	// The object version of the dynamic scan request
 	ObjectVersion int32 `json:"objectVersion,omitempty"`
@@ -36,7 +36,7 @@ type DynamicScanRequest struct {
 
 	// The date that the dynamic scan request was submitted
 	// Format: date-time
-	RequestedDate strfmt.DateTime `json:"requestedDate,omitempty"`
+	RequestedDate Iso8601MilliDateTime `json:"requestedDate,omitempty"`
 
 	// The status of the dynamic scan request
 	// Enum: [SUBMITTED PICKED_UP CANCELED COMPLETED]

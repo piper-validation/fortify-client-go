@@ -20,7 +20,7 @@ type IssueAuditComment struct {
 	// Required: true
 	// Read Only: true
 	// Format: date-time
-	AuditTime strfmt.DateTime `json:"auditTime"`
+	AuditTime Iso8601MilliDateTime `json:"auditTime"`
 
 	// comment
 	// Required: true
@@ -98,7 +98,7 @@ func (m *IssueAuditComment) Validate(formats strfmt.Registry) error {
 
 func (m *IssueAuditComment) validateAuditTime(formats strfmt.Registry) error {
 
-	if err := validate.Required("auditTime", "body", strfmt.DateTime(m.AuditTime)); err != nil {
+	if err := validate.Required("auditTime", "body", Iso8601MilliDateTime(m.AuditTime)); err != nil {
 		return err
 	}
 

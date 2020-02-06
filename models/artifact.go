@@ -35,7 +35,7 @@ type Artifact struct {
 
 	// approval date
 	// Format: date-time
-	ApprovalDate strfmt.DateTime `json:"approvalDate,omitempty"`
+	ApprovalDate Iso8601MilliDateTime `json:"approvalDate,omitempty"`
 
 	// approval username
 	ApprovalUsername string `json:"approvalUsername,omitempty"`
@@ -68,7 +68,7 @@ type Artifact struct {
 
 	// last scan date
 	// Format: date-time
-	LastScanDate strfmt.DateTime `json:"lastScanDate,omitempty"`
+	LastScanDate Iso8601MilliDateTime `json:"lastScanDate,omitempty"`
 
 	// message count
 	MessageCount int64 `json:"messageCount,omitempty"`
@@ -103,7 +103,7 @@ type Artifact struct {
 
 	// upload date
 	// Format: date-time
-	UploadDate strfmt.DateTime `json:"uploadDate,omitempty"`
+	UploadDate Iso8601MilliDateTime `json:"uploadDate,omitempty"`
 
 	// upload IP
 	UploadIP string `json:"uploadIP,omitempty"`

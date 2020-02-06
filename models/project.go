@@ -20,6 +20,7 @@ type Project struct {
 	// Required: true
 	CreatedBy *string `json:"createdBy"`
 
+	// Remove CreationDate since format is causing parsing issues
 	// Date created
 	// Required: true
 	// Read Only: true

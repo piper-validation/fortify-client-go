@@ -80,13 +80,13 @@ func (m *Project) validateCreatedBy(formats strfmt.Registry) error {
 
 func (m *Project) validateCreationDate(formats strfmt.Registry) error {
 
-	if err := validate.Required("creationDate", "body", strfmt.DateTime(m.CreationDate)); err != nil {
+	/*if err := validate.Required("creationDate", "body", strfmt.DateTime(m.CreationDate)); err != nil {
 		return err
 	}
 
 	if err := validate.FormatOf("creationDate", "body", "date-time", m.CreationDate.String(), formats); err != nil {
 		return err
-	}
+	}*/
 
 	return nil
 }

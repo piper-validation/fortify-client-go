@@ -16,10 +16,6 @@ import (
 // swagger:model ProjectVersionCopyCurrentStateRequest
 type ProjectVersionCopyCurrentStateRequest struct {
 
-	// Will copy current state fpr
-	// Required: true
-	CopyCurrentStateFpr *bool `json:"copyCurrentStateFpr"`
-
 	// Previous application version id
 	// Required: true
 	PreviousProjectVersionID *int64 `json:"previousProjectVersionId"`
@@ -33,10 +29,6 @@ type ProjectVersionCopyCurrentStateRequest struct {
 func (m *ProjectVersionCopyCurrentStateRequest) Validate(formats strfmt.Registry) error {
 	var res []error
 
-	if err := m.validateCopyCurrentStateFpr(formats); err != nil {
-		res = append(res, err)
-	}
-
 	if err := m.validatePreviousProjectVersionID(formats); err != nil {
 		res = append(res, err)
 	}
@@ -48,15 +40,6 @@ func (m *ProjectVersionCopyCurrentStateRequest) Validate(formats strfmt.Registry
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
-	return nil
-}
-
-func (m *ProjectVersionCopyCurrentStateRequest) validateCopyCurrentStateFpr(formats strfmt.Registry) error {
-
-	if err := validate.Required("copyCurrentStateFpr", "body", m.CopyCurrentStateFpr); err != nil {
-		return err
-	}
-
 	return nil
 }
 

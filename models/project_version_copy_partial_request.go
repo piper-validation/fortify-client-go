@@ -24,10 +24,6 @@ type ProjectVersionCopyPartialRequest struct {
 	// Required: true
 	CopyBugTrackerConfiguration *bool `json:"copyBugTrackerConfiguration"`
 
-	// Will copy current state fpr
-	// Required: true
-	CopyCurrentStateFpr *bool `json:"copyCurrentStateFpr"`
-
 	// Will copy custom tags
 	// Required: true
 	CopyCustomTags *bool `json:"copyCustomTags"`
@@ -50,10 +46,6 @@ func (m *ProjectVersionCopyPartialRequest) Validate(formats strfmt.Registry) err
 	}
 
 	if err := m.validateCopyBugTrackerConfiguration(formats); err != nil {
-		res = append(res, err)
-	}
-
-	if err := m.validateCopyCurrentStateFpr(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -87,15 +79,6 @@ func (m *ProjectVersionCopyPartialRequest) validateCopyAnalysisProcessingRules(f
 func (m *ProjectVersionCopyPartialRequest) validateCopyBugTrackerConfiguration(formats strfmt.Registry) error {
 
 	if err := validate.Required("copyBugTrackerConfiguration", "body", m.CopyBugTrackerConfiguration); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func (m *ProjectVersionCopyPartialRequest) validateCopyCurrentStateFpr(formats strfmt.Registry) error {
-
-	if err := validate.Required("copyCurrentStateFpr", "body", m.CopyCurrentStateFpr); err != nil {
 		return err
 	}
 

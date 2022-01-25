@@ -172,6 +172,10 @@ type ProjectVersionIssue struct {
 	// Set to true if issue is suppressed
 	// Required: true
 	Suppressed *bool `json:"suppressed"`
+
+	// Set to true if issue has comments
+	// Required: true
+	HasComments *bool `json:"hasComments"`
 }
 
 // Validate validates this project version issue
@@ -231,6 +235,10 @@ func (m *ProjectVersionIssue) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateHasCorrelatedIssues(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateHasComments(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -478,6 +486,15 @@ func (m *ProjectVersionIssue) validateHasAttachments(formats strfmt.Registry) er
 func (m *ProjectVersionIssue) validateHasCorrelatedIssues(formats strfmt.Registry) error {
 
 	if err := validate.Required("hasCorrelatedIssues", "body", m.HasCorrelatedIssues); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *ProjectVersionIssue) validateHasComments(formats strfmt.Registry) error {
+
+	if err := validate.Required("hasComments", "body", m.HasComments); err != nil {
 		return err
 	}
 
